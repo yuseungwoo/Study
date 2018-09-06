@@ -17,7 +17,7 @@
       - Chapter 4주, 우선 순위 큐(Priority Queue)와 힙(Heap)
       - Chapter 5주, 정렬(Sorting)
       - Chapter 6주, 탐색 (Search)
-      - Chapter 7주, 테이블 (Table)과 해수 tash)
+      - Chapter 7주, 테이블 (Table)과 해쉬 (ash)
       - Chapter 8주, 그래프(Graph)
 
 문의 : yuseungwoo@naver.com
