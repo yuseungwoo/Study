@@ -7,17 +7,17 @@
 비용 : 자리세 Only, No 지각비, No 운영비 
 교재 : 책을 싫어함, 인터넷 검색을 통한 이론 정리 -> 핵심 PPT or 그림판 그림 1장(절대 준수) -host
 진행 방식 : 
-    1. 이론 정리 -> 핵심 PPT or 그림판 그림 1장(절대 준수) -host
-    2. 코드 리뷰
-    3. 일정 - 자료 구조( 2개월 )
-      chapter 1주, 연결 리스트 (Linked List)
-      Chapter 2주, 스택(Stack), 큐(Queue)
-      Chapter 3주 . 트리(Tree)
-      Chapter 4주, 우선 순위 큐(Priority Queue)와 힙(Heap)
-      Chapter 5주, 정렬(Sorting)
-      Chapter 6주, 탐색 (Search)
-      Chapter 7주, 테이블 (Table)과 해수 tash)
-      Chapter 8주, 그래프(Graph)
+    - 이론 정리 -> 핵심 PPT or 그림판 그림 1장(절대 준수) -host
+    - 코드 리뷰
+    - 일정 - 자료 구조( 2개월 )
+      - chapter 1주, 연결 리스트 (Linked List)
+      - Chapter 2주, 스택(Stack), 큐(Queue)
+      - Chapter 3주 . 트리(Tree)
+      - Chapter 4주, 우선 순위 큐(Priority Queue)와 힙(Heap)
+      - Chapter 5주, 정렬(Sorting)
+      - Chapter 6주, 탐색 (Search)
+      - Chapter 7주, 테이블 (Table)과 해수 tash)
+      - Chapter 8주, 그래프(Graph)
 
 자료 공유 :  github
 문의 : yuseungwoo@naver.com
