@@ -9,7 +9,7 @@
 진행 방식 : 
     - 이론 정리 -> 핵심 PPT or 그림판 그림 1장(절대 준수) -host
     - 코드 리뷰
-    - 일정 - 자료 구조( 2개월 )
+    - 일정 - 자료 구조( 2개월 ) : 
       - chapter 1주, 연결 리스트 (Linked List)
       - Chapter 2주, 스택(Stack), 큐(Queue)
       - Chapter 3주 . 트리(Tree)
