@@ -21,5 +21,4 @@
       - Chapter 7주, 테이블 (Table)과 해수 tash)
       - Chapter 8주, 그래프(Graph)
 
-자료 공유 :  github
 문의 : yuseungwoo@naver.com
