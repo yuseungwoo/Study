@@ -56,7 +56,7 @@ bool Stack::Pop(double &data)
     }
 }
  
-void main()
+int main()
 {
     Stack stack;
     double data;
@@ -66,8 +66,11 @@ void main()
  
     while (stack.Pop(data))
     {
-        cout << data << ", "<< endl;
+        cout << data << ", ";
     }
+  
+     cout << endl;
+     return 0;
 }
 
 
