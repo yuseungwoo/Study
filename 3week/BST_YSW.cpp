@@ -204,7 +204,7 @@ int main(){
 
 	buf.inorderPrint(); 
 	buf.N_delete(4);
-  buf.N_delete(3);
+        buf.N_delete(3);
 	buf.inorderPrint();
 	return 0;
 }
