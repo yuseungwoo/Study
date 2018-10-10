@@ -11,12 +11,58 @@ int POW(int n){
     return temp;
 }
 
+int swap(int &d1,int &d2){
+    if (d1 > d2){
+        int temp=d1;
+        d1=d2;
+        d2=temp;
+        
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
 class Nsort{
     
 public:
     int buf[BUF_LEN]={4,1,3,2,8,5,7,6};
     int sorted_buf[BUF_LEN]={4,1,3,2,8,5,7,6};
     int sorted_p=0;
+    
+    void bubble_sort(){
+        
+        int swap_check=0,swap_buf[BUF_LEN-1]={1};
+        int i=0;
+        
+        while(1){
+        
+            if( i >= BUF_LEN-1){
+                swap_check=0;
+                for(int j=0; j<BUF_LEN-1;j++){
+                    swap_check=swap_check+swap_buf[j];
+                }
+                
+                if(swap_check==0) {
+                    break;
+                }
+                else{
+                    i=0;
+                    swap_check=0;
+                    for(int j=0; j<BUF_LEN-1;j++){
+                        swap_buf[i]=1;
+                    }
+                }
+                ;
+            }
+            
+            swap_buf[i]=swap(sorted_buf[i],sorted_buf[i+1]);
+            sorted_show();
+            i++;
+        }
+        
+    }
     
     void merge_sort(){
         
@@ -73,7 +119,7 @@ public:
         int buf_len=(idx2-idx1);
         int *idx1_buf=new int[buf_len];
         int *idx2_buf=new int[buf_len];
- 
+        
         
         for (int i_1=0; i_1<idx2-idx1;i_1++){
             idx1_buf[i_1]=sorted_buf[i_1+idx1];
@@ -86,32 +132,32 @@ public:
         
         while(i < buf_len || j < buf_len ){
             
-                if(idx1_buf[i] > idx2_buf[j]){
-                    sorted_buf[sorted_p]=idx2_buf[j];
-                    j++;
-                    sorted_p++;
-                    if(j==buf_len || buf_len==1){
-                        for(int k=i; k<buf_len; k++){
-                            sorted_buf[sorted_p++]=idx1_buf[k];
-                        }
-                        sorted_show();
-                        break;
+            if(idx1_buf[i] > idx2_buf[j]){
+                sorted_buf[sorted_p]=idx2_buf[j];
+                j++;
+                sorted_p++;
+                if(j==buf_len || buf_len==1){
+                    for(int k=i; k<buf_len; k++){
+                        sorted_buf[sorted_p++]=idx1_buf[k];
                     }
                     sorted_show();
+                    break;
                 }
-                else{
-                    sorted_buf[sorted_p]=idx1_buf[i];
-                    i++;
-                    sorted_p++;
-                    if(i==buf_len || buf_len==1){
-                        for(int k=j; k<buf_len; k++){
-                            sorted_buf[sorted_p++]=idx2_buf[k];
-                        }
-                        sorted_show();
-                        break;
+                sorted_show();
+            }
+            else{
+                sorted_buf[sorted_p]=idx1_buf[i];
+                i++;
+                sorted_p++;
+                if(i==buf_len || buf_len==1){
+                    for(int k=j; k<buf_len; k++){
+                        sorted_buf[sorted_p++]=idx2_buf[k];
                     }
-                     sorted_show();
+                    sorted_show();
+                    break;
                 }
+                sorted_show();
+            }
             
         }
         
@@ -127,8 +173,9 @@ int main(){
     Nsort buf;
     
     buf.show();
-    buf.merge_sort();
-    buf.sorted_show();
-      
+    //buf.merge_sort();
+    buf.bubble_sort();
+    //buf.sorted_show();
+    
     return 0;
 }
