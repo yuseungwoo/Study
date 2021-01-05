@@ -1,0 +1,59 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled15.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "authorship_tag": "ABX9TyOgA7e3JZPg8nucvsY0l5sC",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/yuseungwoo/Study/blob/master/%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98%20%EC%97%B0%EC%8A%B5\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3SnUQzSKoYmq",
+        "outputId": "b1963850-3d62-4d2d-c1f5-cd198554495f"
+      },
+      "source": [
+        "import torch\r\n",
+        "import torch.nn as nn\r\n",
+        "\r\n",
+        "rnn = nn.GRU(input_size=10, hidden_size=20, num_layers=1)\r\n",
+        "input = torch.randn(5, 3, 10)\r\n",
+        "h0 = torch.randn(1, 3, 20)\r\n",
+        "output, hn = rnn(input, h0)\r\n",
+        "print(next(rnn.parameters()).shape)"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "torch.Size([60, 10])\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
